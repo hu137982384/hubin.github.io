@@ -1,0 +1,123 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-decoration:none; 
+}
+.nav{
+	width:100%;
+	height: 50px;
+	position: relative;
+}
+.nav .nav-center{
+	width:85%;
+	height: 50px;
+	margin:0px auto;
+
+}
+.nav .nav-center .nav-1, .nav .nav-center .nav-2{
+	float: left;
+}
+ .nav .nav-center .nav-2{
+	margin-left: 30px;
+} 
+
+.nav .nav-center img{
+	width:47px;
+	height: 42px;
+	vertical-align:-70%;
+}
+
+.nav .nav-center span{
+	font-size: 20px;
+	color: blue;
+	margin-left: 5px;
+}
+.nav .nav-center span:hover{
+	color:#49a9ee;	
+}
+.nav .nav-center .nav-3{
+	margin-left: 80px;
+	float: left;
+}
+
+/* 
+.nav .nav-center .nav-3 .nav-zhedang{
+	width:100%;
+	height: 645px;
+	border:1px solid #000;
+	position: absolute;
+	left: 0px;
+	top:0px;
+	background: rgba(0,0,0,.5);
+}
+
+
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian{
+	width:520px;
+	height: 368px;
+	border:1px solid #000;
+	margin:100px auto;
+	background: #fff;
+	border-radius: 5px;
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p1{
+	width:100%;
+	height: 48px;
+
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p1 span{
+	font-size: 14px;
+	
+	line-height: 48px;
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p1 span:nth-child(1){
+	margin-left: 15px;
+	color: rgba(0, 0, 0, 0.85);
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p1 span:nth-child(2){
+	float: right;
+	margin-right:20px;
+	color: rgba(0, 0, 0, 0.5);
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p1 span:nth-child(2):hover{
+	color: rgba(0, 0, 0, 0.85);
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .center{
+	width:100%;
+	height:272px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding: 16px;
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p2{
+	width:100%;
+	height: 28px;
+
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p2 span{
+	font-size: 15px;
+	line-height: 32px;
+	cursor: pointer;
+	width:60px;
+	height: 32px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	display: inline-block;
+	text-align: center;
+	background: #F2F2F2;
+	color: rgba(0, 0, 0, 0.85);
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p2 span:hover{
+	color: rgba(0, 0, 0, 0.1);
+	background: #F9F9F9;
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p2 span:nth-child(1){
+	margin-left: 15px;
+	color: rgba(0, 0, 0, 0.85);
+}
+.nav .nav-center .nav-3 .nav-zhedang .dengluyemian .p2 span:nth-child(2){
+	color: rgba(0, 0, 0, 0.85);
+
+}
+ */
