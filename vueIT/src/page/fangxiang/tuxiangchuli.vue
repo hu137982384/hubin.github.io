@@ -1,0 +1,461 @@
+<template>	
+	<div >
+			<div class='fx1'>
+			<span>分类：</span>
+			<p>
+				 <ul>
+					<li v-for='(obj,$index ) in fx' ><router-link  :to="{ path: obj.path }">{{obj.ename}}</router-link></li>
+				</ul>
+			</p>
+		</div>
+		<div class='fx2'>
+			<span>难度：</span>
+			<p>
+				 <ul>
+					<li v-for='(obj,$index ) in fx1' ><router-link  :to="{ path: obj.path }">{{obj.ename}}</router-link></li>
+				</ul>
+			</p>
+		</div>
+		<div class='zuire'> 
+			<span>最新</span>
+			<span>最热</span>
+		</div>
+		<div class="down">
+			<div  class='down1' :class="{'active':currentIndex}"  v-for='(obj,index) in fx3'  @mouseover='fn(index)' @mouseout='fn1(index)' >
+				<div class="down2">
+					 <img :src="obj.img">
+					 <h5>{{obj.h5}}</h5>
+					 <p class='p1'>{{obj.p1}}</p>
+					 <span class='sp1'>{{obj.sp1}}</span>
+					 <span class='sp2'>{{obj.sp2}}</span>
+					 <span id='sp3' class='sp3'  >{{obj.sp3}}</span>
+					 <span class='sp4'>{{obj.sp4}}</span> 
+				</div>				
+			</div>
+			<div class='daohang'>
+				<div class='daohang1'>
+					<span>首页</span>
+					<span>上一页</span>
+					<ul>
+						<li class="li1">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+					</ul>
+					<span>下一页</span>
+					<span>尾页</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>		
+</template><script>
+	export default {
+	name: 'app',
+	data(){
+		return{	
+		vactive:true,
+			currentIndex: 0,
+			fx3:[
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/1.jpg',
+					h5:'仿微信图片选择器',
+					p1:'实现微信APP中的图片选择器，综合案例不容错过！',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'4小时1分',
+					sp4:'跟我学',
+					currentIndex:1
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/2.jpg',
+					h5:'Spring事务管理',
+					p1:'应用事务解决银行转账中数据不一致问题',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'3小时1分',
+					sp4:'跟我学',
+					currentIndex:2
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/3.jpg',
+					h5:'Linux权限管理之基本权限',
+					p1:'Linux的基本权限和默认权限管理',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'2小时1分',
+					sp4:'跟我学',
+					currentIndex:3
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/4.jpg',
+					h5:'sass进阶篇',
+					p1:'Sass使你摆脱重复编写css代码的工作',
+
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'3小时1分',
+					sp4:'跟我学',
+					currentIndex:4
+				},
+				{
+
+					ename:'全部',
+					img:'../../../static/image/photo/5.jpg',
+					h5:'C#开发轻松入门',
+					p1:'NET开发轻松入门',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'3小时1分',
+					sp4:'跟我学',
+					currentIndex:5
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/6.jpg',
+
+					h5:'神奇的JpGraph类库',
+					p1:'通过JpGraph类库可以画出炫彩的统计图',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'3小时12分',
+					sp4:'跟我学',
+					currentIndex:6
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/7.jpg',
+
+					h5:'x游戏开发基础之Lua基础篇',
+					p1:'游戏开发入门从撸啊开始',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'1小时34分',
+					sp4:'跟我学',
+					currentIndex:7
+				},
+				{
+					ename:'全部',
+					img:'../../../static/image/photo/8.jpg',
+
+					h5:'CSS图片动态提示效果',
+					p1:'实用的CSS3图片动态提示效果',
+					sp1:'更新至8-1',
+					sp2:'360人学习',
+					sp3:'2小时18分',
+					sp4:'跟我学',
+					currentIndex:8
+				}
+				
+				
+			],
+			fx1:[
+				{
+					ename:'全部',
+					path:'nandu',
+					active:false,
+					i:1
+				},{
+					ename:'初级',
+					path:'chuji',
+					active:false,
+					i:1
+				},{
+					ename:'中级',
+					path:'zhongji',
+					active:false,
+					i:1
+				},{
+					ename:'高级',
+					path:'gaoji',
+					active:false,
+					i:1
+				},
+			],		
+			fx:[
+				{
+					ename:'全部',
+					path:'quan4',
+					active:false,
+					i:1
+				},
+				/*数据处理结束*/
+				{
+					ename:'PhotoShop',
+					path:'photoshop',
+					active:false,
+					i:1
+				},
+				{
+					ename:'Maya',
+					path:'maya',
+					active:false,
+					i:1
+				},
+				{
+					ename:'Promiere',
+					path:'promiere',
+					active:false,
+					i:1
+				},
+				
+
+			]	 
+		 }
+	},
+	methods:{
+		fn:function(index){
+			this.currentIndex = index;
+			var sp3=document.getElementsByClassName('sp3');
+			for(var i=0;i<sp3.length;i++){
+				sp3[index].style="opacity:0.5;right :0px";
+			}
+
+		},
+		fn1:function(index){
+			this.currentIndex = index;
+			var sp3=document.getElementsByClassName('sp3');
+			for(var i=0;i<sp3.length;i++){
+				sp3[index].style="opacity:0;right-100px";
+			}
+			
+		},
+	}
+}
+</script>
+
+<style scoped>
+.fx1{
+	width:100%;
+	height: 50px;
+	border-bottom: 1px solid #EDF1F2;
+}
+.fx2 {
+	width:100%;
+	height: 50px;
+	border-bottom: 1px solid #EDF1F2;
+}
+.fx1 p {
+	float: left;
+	width:88%;
+	height: 100%;
+}
+.fx2 p {
+	float: left;
+	width:88%;
+	height: 100%;
+}
+.fx1 p ul li, .fx2 p ul li{
+	float: left;
+	width:80px;
+	height: 30px;
+	text-align: center;
+}
+.fx1 p ul, .fx2 p ul {
+	margin-top: 10px;
+}
+.fx1 p ul li a, .fx2 p ul li a{
+	font-size: 13px;
+	color: #666666;
+    padding: 4px;
+    cursor: pointer;
+	color: #666;
+	text-align: center;
+	line-height: 27px;
+}
+.fx1 p ul li .router-link-active{
+	background: #F01400;	
+	color: #ffffff;
+}
+.fx1 span, .fx2 span{
+	float: left;
+	width:80px;
+	height: 100%;
+	display: inline-block;
+	color: #666;
+	font-size: 12px;
+	text-indent: 1em;
+	line-height: 50px;
+}
+.zuire{
+	width:100%;
+	height: 40px;
+	background:#F9F9F9;
+	line-height: 40px;
+}
+.zuire span{
+	float: left;
+    margin: 0 20px;
+    font-size: 13px;
+    color: #656e73;
+}
+.zuire span:hover{
+	
+    color: #000;
+}
+.down{
+	width:100%;
+	
+}.down1{
+	width:280px;
+	height: 270px;
+	float: left;
+	margin: 0px  10px 20px 10px;
+	transition: all 0.5s  ease;
+}
+.down2:hover{
+	box-shadow:0px 0px 5px #666;
+
+}
+.down1 .down2{
+	width:85.7%;
+	height: 90%;
+	transition: all 0.5s  ease;
+	padding:20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 10px;
+	position: relative;
+	/* overflow: hidden; */
+}
+.down1 .down2 h5{
+	margin: 18px 0 0;
+    height: 18px;
+    line-height: 18px;
+    color: #14191e;
+    text-align: left;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.down1 .down2 .p1{
+	margin-left: 8px;
+	margin-top: 8px;
+    height: 18px;
+    line-height: 18px;
+    color: #ccc;
+   font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.down1 .down2 .sp1, .down1 .down2 .sp2{
+	
+	margin-top: 8px;
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+   font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.down1 .down2 .sp2{
+	margin-left: 10px; 
+	margin-top: 8px;
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+   font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.down1 .down2 .sp3{
+	position: absolute;
+	top:0px;
+	display: inline-block;
+	width:60px;
+	height: 20px;
+	font-size: 12px;
+	color:#ffffff;
+	right:-90px;
+	text-align: center;
+	line-height: 20px;
+	opacity: 0;
+	background: #000;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.down1 .down2 .sp4{
+	display: block;
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    width: 46px;
+    height: 23px;
+    line-height: 23px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    background: url(../../../static/image/bg/follow_label.png);
+}
+
+
+
+
+.down .daohang{
+	width:100%;
+	height: 55px;
+
+	float: left;
+	margin: 20px 0px 30px 0px;
+}
+.down .daohang .daohang1{
+	width:35%;
+	height: 23px;
+
+	
+	margin: 10px auto;
+}
+.down .daohang ul li{
+	float: left;
+	font-size: 13px;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+	margin-left:10px;
+	line-height: 23px;
+	width:23px;
+
+}.down .daohang ul .li1{
+	background: red;
+	color: #ffffff;
+
+}.down .daohang ul .li1:hover{
+
+	color: #ffffff;
+
+}
+.down .daohang ul li:hover{	
+	border-bottom: 1px solid red;
+	color: red;
+}
+.down .daohang ul {
+	float: left;
+
+}
+.down .daohang span {
+	float: left;
+	font-size: 13px;
+	height: 100%;
+	text-align: center;
+	cursor: pointer;
+	margin-left:10px;
+	line-height: 23px;
+
+}
+.down .daohang span:hover{
+	color: red;
+	border-bottom: 1px solid red;
+}
+
+</style>
